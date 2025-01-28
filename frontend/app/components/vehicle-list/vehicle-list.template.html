@@ -1,0 +1,33 @@
+<div class="vehicle-list">
+  <h2>Lista Pojazdów</h2>
+
+  <md-button class="md-raised md-primary" ng-click="goToAddVehiclePage()">Dodaj Nowy Pojazd</md-button>
+
+  <div ng-if="hasError" class="error-message">
+    <p>{{errorMessage}}</p>
+    <md-button class="md-raised md-warn" ng-click="fetchVehicles()">Spróbuj ponownie</md-button>
+  </div>
+
+  <div ng-if="vehicles.length === 0 && !hasError" class="no-vehicles">
+    <p>Brak dostępnych pojazdów. Kliknij "Dodaj Nowy Pojazd", aby dodać pierwszy pojazd.</p>
+  </div>
+
+  <md-list ng-if="vehicles.length > 0">
+    <md-list-item class="md-3-line" ng-repeat="vehicle in vehicles">
+      <div class="md-list-item-text">
+        <h3>{{vehicle.brand}}</h3>
+        <p>
+          <strong>Numer Rejestracyjny:</strong> {{vehicle.registrationNumber}}<br>
+          <strong>VIN:</strong> {{vehicle.vin}}<br>
+          <strong>E-mail:</strong> {{vehicle.email}}<br>
+          <strong>Adres:</strong>
+          <span>{{vehicle.address.street}}, {{vehicle.address.city}}, {{vehicle.address.postalCode}}, {{vehicle.address.country}}</span><br>
+          <strong>Aktualna Lokalizacja:</strong> {{vehicle.currentLocation}}<br>
+          <strong>Wypożyczony:</strong> {{vehicle.isRented ? 'Tak' : 'Nie'}}
+        </p>
+      </div>
+      <md-button class="md-raised md-warn" ng-click="deleteVehicle(vehicle.id)">Usuń</md-button>
+      <md-button class="md-raised" ng-click="goToEditVehiclePage(vehicle.id)">Edytuj</md-button>
+    </md-list-item>
+  </md-list>
+</div>

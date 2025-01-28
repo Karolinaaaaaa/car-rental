@@ -1,0 +1,6 @@
+# config/routes.yaml
+
+# Automatyczne ładowanie tras opartych na atrybutach
+controllers:
+  resource: ../src/Controller/
+  type: attribute

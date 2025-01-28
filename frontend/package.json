@@ -1,0 +1,20 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./ -p 4200"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "angular": "1.8",
+    "angular-animate": "1.8",
+    "angular-aria": "1.8",
+    "angular-material": "1.2",
+    "angular-messages": "1.8",
+    "http-server": "^14.1.1"
+  }
+}

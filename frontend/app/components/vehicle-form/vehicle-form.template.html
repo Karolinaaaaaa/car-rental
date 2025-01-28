@@ -1,0 +1,40 @@
+<form name="vehicleForm" ng-submit="saveVehicle()">
+  <md-input-container class="md-block">
+    <label>Marka</label>
+    <input type="text" ng-model="vehicle.brand" required>
+  </md-input-container>
+
+  <md-input-container class="md-block">
+    <label>Numer Rejestracyjny</label>
+    <input type="text" ng-model="vehicle.registrationNumber" required>
+  </md-input-container>
+
+  <md-input-container class="md-block">
+    <label>VIN</label>
+    <input type="text" ng-model="vehicle.vin" required>
+  </md-input-container>
+
+  <md-input-container class="md-block">
+    <label>E-mail</label>
+    <input type="email" ng-model="vehicle.email" required>
+  </md-input-container>
+
+  <address-component address="vehicle.address"></address-component>
+
+  <md-input-container class="md-block">
+    <label>Aktualna Lokalizacja</label>
+    <input type="text" ng-model="vehicle.currentLocation" disabled>
+  </md-input-container>
+
+  <md-checkbox ng-model="vehicle.isRented">Wypożyczony</md-checkbox>
+
+  <div layout="row" layout-align="start center">
+    <md-button class="md-raised md-primary" type="submit">Zapisz</md-button>
+    <md-button class="md-raised" ng-click="cancel()">Anuluj</md-button>
+  </div>
+
+  <div ng-if="hasError" class="error-message">
+    <p>{{errorMessage}}</p>
+    <md-button class="md-raised md-warn" ng-click="retrySaveVehicle()">Spróbuj ponownie</md-button>
+  </div>
+</form>

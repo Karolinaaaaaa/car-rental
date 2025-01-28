@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "http://car_rental_backend:8000",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
