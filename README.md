@@ -48,25 +48,7 @@ Projekt aplikacji frontendowo-backendowej do zarządzania bazą danych pojazdów
 
 ### **Frontend**
 
-1. Przejdź do katalogu frontend:
-
-   ```bash
-   cd frontend
-   ```
-
-2. Zainstaluj zależności:
-
-   ```bash
-   npm install
-   ```
-
-3. Uruchom aplikację:
-
-   ```bash
-   ng serve
-   ```
-
-4. Frontend będzie dostępny pod: [http://localhost:4200](http://localhost:4200).
+1. Frontend będzie dostępny pod: [http://localhost:4200](http://localhost:4200).
 
 ---
 
